@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Gilroy Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gilroy:wght@400;700&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="main-wraper">
+        <aside class="left-sidebar">
+
+            <div class="sidebar-header">
+                <ul class="logo-ul">
+                    <li><img class="aside-logo" src="/icons/urlshortly-logo-icon.png" alt=""><img class="aside-txt-logo"
+                            src="/icons/urlshortly-text-logo.png" alt=""></li>
+                </ul>
+
+                <!-- collaps icon  -->
+                <img class="sidebar-collaps-icon" src="icons/sidebar-collaps-icon.png" alt="">
+            </div>
+            <div class="aside-content">
+                <ul>
+                    <li><a href="">
+                            <div>
+                                <img src="icons/dashboard-icon.png" alt="">
+                            </div>
+                            <p>Dashboards</p>
+                        </a>
+                    </li>
+                    <li> <a href="">
+                            <div>
+                                <img src="icons/bio-page-icon.png" alt="">
+                            </div>
+                            <p>Bio Pages</p>
+                        </a>
+                    </li>
+                    <li><a href="">
+                            <div>
+                                <img src="icons/qr-code-icon.png" alt="">
+                            </div>
+                            <p>QR Codes</p>
+                        </a>
+                    </li>
+                    <li><a href="">
+                            <div>
+                                <img src="icons/statistic-icon.png" alt="">
+                            </div>
+                            <p>Statistics</p>
+                        </a>
+                    </li>
+                </ul>
+                <h6 class="asidebar-sub-heading">Channels</h6>
+                <ul>
+                    <li><a href="">
+                            <div>
+                                <img src="icons/my-channel-icon.png" alt="">
+                            </div>
+                            <p>My Channels</p>
+                        </a>
+                    </li>
+                </ul>
+                <h6 class="asidebar-sub-heading">Link Management</h6>
+
+                <ul>
+                    <li><a href="">
+                            <div>
+                                <img src="icons/links-icon.png" alt="">
+                            </div>
+                            <p>Links</p>
+                        </a></li>
+                    <li><a href="">
+                            <div>
+                                <img src="icons/achieved-links-icon.png" alt="">
+                            </div>
+                            <p>Achieved Links</p>
+                        </a></li>
+                    <li><a href="">
+                            <div>
+                                <img src="icons/expired-links.png" alt="">
+                            </div>
+                            <p>Expired Links</p>
+                        </a></li>
+                    <li><a href="">
+                            <div>
+                                <img src="icons/campaigns-icon.png" alt="">
+                            </div>
+                            <p>Campaigns</p>
+                        </a></li>
+                    <li><a href="">
+                            <div>
+                                <img src="icons/custom-splash-icon.png" alt="">
+                            </div>
+                            <p>Custom Splash</p>
+                        </a></li>
+                    <li><a href="">
+                            <div>
+                                <img src="icons/cta-icon.png" alt="">
+                            </div>
+                            <p>CTA Overlay
+                            </p>
+                        </a></li>
+                    <li><a href="">
+                            <div>
+                                <img src="icons/tracking-pixels-icon.png" alt="">
+                            </div>
+                            <p>Tracking Pixels</p>
+                        </a></li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="icons/branded-domains-icon.png" alt="">
+                            </div>
+                            <p>Branded Domains</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="icons/teams-icon.png" alt="">
+                            </div>
+                            <p>Teams</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="icons/Integrat-icon.png" alt="">
+                            </div>
+                            <p>Integrations
+                            </p>
+                        </a>
+                    </li>
+                    <li class="aside-tools-drpbtn">
+                        <div class="dropdown dropbottom">
+                            <div class="tools-icon-div">
+                                <img src="icons/tools-icon.png" alt="">
+                            </div>
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                                <span>Tools</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class=""><a class="dropdown-item" href="#">Users tools </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </aside>
+        <div class="right-main-wraper">
+            <header class="dashboard-header">
+                <div class="row mx-0">
+                    <div class="col-lg-6 ">
+                        <div class="ds-header-quick-shorten">
+                            <button type="button" class="btn" data-bs-toggle="modal"
+                                data-bs-target="#quick-shortener-model">
+                                Quick Shortener
+
+                                <span class="ctrl-k-text">CTRL K</span>
+                            </button>
+                        </div>
+
+                        <!-- header quick shorten model  -->
+                        <div class="modal quick-short-model" id="quick-shortener-model">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Quick Shorten</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="past-long-url-content">
+                                            <input class="form-control border-0" type="search"
+                                                placeholder="Past a long link">
+                                            <div class="btn-group" role="group" aria-label="Button group">
+                                                <button class="btn" data-bs-toggle="collapse" data-bs-target="#demo">
+                                                    <img src="icons/ds-header-filter.png" alt="">
+                                                </button>
+                                                <button class="btn btn-primary">Shorten</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- collapse  -->
+                                        <div id="demo" class="collapse past-long-link-collapse">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="domain">Domain</label>
+                                                        <div class="dropdown">
+                                                            <button type="button"
+                                                                class="btn text-start w-100 dropdown-toggle border"
+                                                                data-bs-toggle="dropdown">
+                                                                https:/urlshortly.com
+                                                            </button>
+                                                            <ul class="dropdown-menu py-0 w-100 rounded-0">
+                                                                <li class="p-1"><input class="w-100 p-1" type="search">
+                                                                </li>
+                                                                <li class="bg-primary p-2"> https:/urlshortly.com</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="redirect">Redirect</label>
+                                                        <div class="dropdown">
+                                                            <button type="button"
+                                                                class="btn text-start w-100 dropdown-toggle border"
+                                                                data-bs-toggle="dropdown">
+                                                                Splash
+                                                            </button>
+                                                            <ul class="dropdown-menu py-0 w-100 rounded-0">
+                                                                <li class="p-1"><input class="w-100 p-1" type="search">
+                                                                </li>
+                                                                <li class="p-2 ds-redirection">Redirection</li>
+                                                                <li class="bg-primary p-2">Splash</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="password-rotection">Password Protection</label>
+                                                        <p class="label-description">By adding a password, you can
+                                                            restrict the access.</p>
+                                                        <div class="type-your-password-her">
+                                                            <input class="form-control" type="text"
+                                                                id="password-rotection"
+                                                                placeholder="Type your password here">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="description">Description</label>
+                                                        <p class="label-description">This can be used to identify URLs
+                                                            on your account.</p>
+                                                        <div class="type-your-description-her">
+                                                            <input class="form-control" type="text" id="description"
+                                                                placeholder="Type your description here">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ds-admin-info">
+                            <div class="item">
+                                <ul class="admin-content">
+                                    <li class="filter mr_20"><img src="icons/ds-header-filter.png" alt=""></li>
+                                    <li class="bill-icon mr_20"><img src="icons/ds-info-icon.png" alt=""> <span
+                                            class="bill-info-count">4</span></li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                                                <img src="icons/ds-admin-img.png" alt="">
+
+                                                <img src="icons/ds-admin-drp-dwn-icon.png" alt="">
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Billing</a></li>
+                                                <li><a class="dropdown-item" href="#">Get Verified</a></li>
+                                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                                <li><a class="dropdown-item" href="#">Help Center</a></li>
+                                                <li><a class="dropdown-item" href="#">Log out</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="right-main-content-wraper">
+                <div class="dashboard-main-content">
+                    <img class="gd-morning-img" src="icons/good-morning-img.png" alt="good morning">
+
+                    <!-- Site Analytics  -->
+                    <div class="site-analytics-content">
+                        <div class="top-baner">
+                            <div>
+                                <h5 class="title">Site Analytics <img src="icons/information-icon.png" alt=""></h5>
+                            </div>
+                            <div class="drp-btn-group">
+
+                                <!-- country flag select -->
+                                <div class="dropdown me-3">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="icons/united-kingdom-flag.png" alt="">
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Action 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Action 2</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- computer dropdown -->
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="icons/computer-icon.png" alt="">
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                        <li><a class="dropdown-item" href="#">Action 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Action 2</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="site-reviews-baner">
+                            <div class="item links-today">
+                                <p class="title">Links</p>
+
+                                <div class="d_flex">
+                                    <div>
+                                        <p class="info">12 <span>Today</span></p>
+                                    </div>
+                                    <div>
+                                        <img src="icons/links-today-img.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item clicks-today">
+                                <p class="title">Clicks</p>
+                                <div class="d_flex">
+                                    <div>
+                                        <p class="info">65% <span>Today</span></p>
+                                    </div>
+                                    <div>
+                                        <img src="icons/clicks-today-img.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item keywords-today">
+                                <p class="title">Keywords</p>
+
+                                <div class="three-line">
+                                    <span class="yellow-line"></span>
+                                    <span class="black-line"></span>
+                                    <span class="yellow-line"></span>
+                                </div>
+                                <p class="info">98 <span>+12%</span> </p>
+                            </div>
+                            <div class="item paid-keywords">
+                                <p class="title">Paid Keywords</p>
+                                <div class="d_flex">
+                                    <div>
+                                        <p class="info">53% <span>0%</span></p>
+                                    </div>
+                                    <div>
+                                        <img src="icons/paids-keywords-today-img.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item paid-keywords-two">
+                                <p class="title">Paid Keywords</p>
+
+                                <p class="info">70% <span>+23.86%</span> </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- dashboard chats  -->
+                    <div class="dashboard-chats">
+                        <img src="icons/ds-board-chats.png" alt="" width="100%">
+                    </div>
+
+                    <!-- past a long link and recent activity content  -->
+                    <div class="link-recent-activity-cont">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="left-baner">
+                                    <div class="wraper">
+                                        <div class="shorten-link">
+                                            <textarea class="form-control border-0 past-up-ten-long-url-txtarea" name="" id=""
+                                                rows="4"
+                                                placeholder="Past up to 10 long urls. One URL per line."></textarea>
+                                            <input class="form-control ds-paste-long-link-input" type="text"
+                                                placeholder="Paste a long link">
+                                            <button class="btn" data-bs-toggle="collapse"
+                                                data-bs-target="#ds-shorten-collapse"><img
+                                                    src="icons/ds-board-past-link-collapse-img.png" alt=""></button>
+                                            <button class="btn ds-shorten-btn">Shorten</button>
+                                        </div>
+
+                                        <div class="sngl-mlt-btn-grop">
+                                            <button class="btn ds-single-btn">Single</button>
+                                            <button class="btn ds-multiple-btn">Multiple</button>
+                                        </div>
+
+                                        <!-- collapse  -->
+                                        <div id="ds-shorten-collapse" class="collapse">
+                                            <div class="row mt-3">
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="domain">Domain</label>
+                                                        <div class="dropdown">
+                                                            <button type="button"
+                                                                class="btn text-start w-100 dropdown-toggle border"
+                                                                data-bs-toggle="dropdown">
+                                                                https:/urlshortly.com
+                                                            </button>
+                                                            <ul class="dropdown-menu py-0 w-100 rounded-0">
+                                                                <li class="p-1"><input class="w-100 p-1" type="search">
+                                                                </li>
+                                                                <li class="bg-primary p-2"> https:/urlshortly.com</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="redirect">Redirect</label>
+                                                        <div class="dropdown">
+                                                            <button type="button"
+                                                                class="btn text-start w-100 dropdown-toggle border"
+                                                                data-bs-toggle="dropdown">
+                                                                Splash
+                                                            </button>
+                                                            <ul class="dropdown-menu py-0 w-100 rounded-0">
+                                                                <li class="p-1"><input class="w-100 p-1" type="search">
+                                                                </li>
+                                                                <li class="p-2 ds-redirection">Redirection</li>
+                                                                <li class="bg-primary p-2">Splash</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="password-rotection my-3">Password Protection</label>
+                                                        <p class="label-description">By adding a password, you can
+                                                            restrict the access.</p>
+                                                        <div class="type-your-password-her">
+                                                            <input class="form-control" type="text"
+                                                                id="password-rotection"
+                                                                placeholder="Type your password here">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="description my-3">Description</label>
+                                                        <p class="label-description">This can be used to identify URLs
+                                                            on your account.</p>
+                                                        <div class="type-your-password-her">
+                                                            <input class="form-control" type="text" id="description"
+                                                                placeholder="Type your description here">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="right-baner">
+                                    <h5 class="recent-activity">Recent Activity</h5>
+                                    <div class="item">
+                                        <div class="site-perform">
+                                            <div>
+                                                <p><img src="icons/your-site-clicked-icon.png" alt="">Your site Clicked
+                                                </p>
+                                                <h4 class="percentage">80%</h4>
+                                            </div>
+                                            <div>
+                                                <p><img src="icons/view-website-icon.png" alt="">View website</p>
+                                                <h4 class="percentage">80%</h4>
+                                            </div>
+                                        </div>
+                                        <div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // === for aside bar collapse and inner elements 
+            $('.sidebar-collaps-icon').click(function () {
+                // Toggle the 'collapsed' class on the sidebar
+                $('.left-sidebar').toggleClass('collapsed');
+
+                // collaps icon rotate 
+                $('.left-sidebar .sidebar-header .sidebar-collaps-icon').toggleClass('sidebar-collapse-rotate');
+
+                // Hide some elements in the sidebar 
+                $('.aside-content ul li a p').toggleClass('aside-content-p');
+
+                $('.sidebar-header li .aside-txt-logo').toggleClass('aside-txt-logo-dp-none');
+
+                $('.aside-content ul li a').toggleClass('aside-content-ul-li-a');
+
+                $('.aside-content ul li a div').toggleClass('aside-content-ul-li-a-div');
+
+                $('.asidebar-sub-heading').toggleClass('asidebar-sub-heading-text');
+
+                $('.left-sidebar .sidebar-header li').toggleClass('left-sidebar-sidebar-header-li');
+
+
+                // aside tools dropdwn btn 
+                $('.aside-tools-drpbtn .btn span').toggleClass('aside-txt-logo-dp-none');
+
+                $('.aside-tools-drpbtn .tools-icon-div').toggleClass('tools-icon-div-togle');
+
+
+            });
+
+
+            // === for asidebar header position 
+            $('.left-sidebar').on('scroll', function () {
+                if ($(this).scrollTop() > 3) {
+                    $('.sidebar-header').addClass('sidebar-header-for-sticky');
+                } else {
+
+                    $('.sidebar-header').removeClass('sidebar-header-for-sticky');
+                }
+            });
+
+            // === for dashboard right content 
+            // shorten-link for single and multiple btn 
+            $('.ds-single-btn').click(function () {
+                $('.ds-paste-long-link-input').show(); // This line is redundant since the element is already clicked
+                $('.past-up-ten-long-url-txtarea').hide();
+            });
+
+            $('.ds-multiple-btn').click(function () {
+                $('.past-up-ten-long-url-txtarea').show(); // This line is redundant since the element is already clicked
+                $('.ds-paste-long-link-input').hide();
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>
