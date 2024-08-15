@@ -207,6 +207,14 @@
     box-shadow: 0px 0px 20px 0px #F7F5F199;
    
 }
+/* for side bar link active  */
+.sidebar-link.active {
+    background-color: var(--clr-F7F5F1);
+    font-weight: bold;
+}
+
+/* end for side bar link active  */
+
 
 .left-sidebar.collapsed {
     transition: width 0.1 ease-in-out; 

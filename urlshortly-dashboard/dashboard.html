@@ -14,14 +14,12 @@
 </head>
 
 <body>
-    <div>
-        <h1>github</h1>
-    </div>
-    
+
+
     <div class="main-wraper">
         <aside class="left-sidebar">
 
-          
+
             <div class="sidebar-header">
                 <ul class="logo-ul">
                     <li><img class="aside-logo" src="/icons/urlshortly-logo-icon.png" alt=""><img class="aside-txt-logo"
@@ -33,28 +31,28 @@
             </div>
             <div class="aside-content">
                 <ul>
-                    <li><a href="">
+                    <li class="sidebar-link"><a href="">
                             <div>
                                 <img src="icons/dashboard-icon.png" alt="">
                             </div>
                             <p>Dashboards</p>
                         </a>
                     </li>
-                    <li> <a href="">
+                    <li class="sidebar-link"> <a href="">
                             <div>
                                 <img src="icons/bio-page-icon.png" alt="">
                             </div>
                             <p>Bio Pages</p>
                         </a>
                     </li>
-                    <li><a href="">
+                    <li class="sidebar-link"><a href="">
                             <div>
                                 <img src="icons/qr-code-icon.png" alt="">
                             </div>
                             <p>QR Codes</p>
                         </a>
                     </li>
-                    <li><a href="">
+                    <li class="sidebar-link"><a href="">
                             <div>
                                 <img src="icons/statistic-icon.png" alt="">
                             </div>
@@ -64,7 +62,7 @@
                 </ul>
                 <h6 class="asidebar-sub-heading">Channels</h6>
                 <ul>
-                    <li><a href="">
+                    <li class="sidebar-link"><a href="">
                             <div>
                                 <img src="icons/my-channel-icon.png" alt="">
                             </div>
@@ -75,50 +73,50 @@
                 <h6 class="asidebar-sub-heading">Link Management</h6>
 
                 <ul>
-                    <li><a href="">
+                    <li class="sidebar-link"><a href="">
                             <div>
                                 <img src="icons/links-icon.png" alt="">
                             </div>
                             <p>Links</p>
                         </a></li>
-                    <li><a href="">
+                    <li class="sidebar-link"><a href="">
                             <div>
                                 <img src="icons/achieved-links-icon.png" alt="">
                             </div>
                             <p>Achieved Links</p>
                         </a></li>
-                    <li><a href="">
+                    <li class="sidebar-link"><a href="">
                             <div>
                                 <img src="icons/expired-links.png" alt="">
                             </div>
                             <p>Expired Links</p>
                         </a></li>
-                    <li><a href="">
+                    <li class="sidebar-link"><a href="">
                             <div>
                                 <img src="icons/campaigns-icon.png" alt="">
                             </div>
                             <p>Campaigns</p>
                         </a></li>
-                    <li><a href="">
+                    <li class="sidebar-link"><a href="">
                             <div>
                                 <img src="icons/custom-splash-icon.png" alt="">
                             </div>
                             <p>Custom Splash</p>
                         </a></li>
-                    <li><a href="">
+                    <li class="sidebar-link"><a href="">
                             <div>
                                 <img src="icons/cta-icon.png" alt="">
                             </div>
                             <p>CTA Overlay
                             </p>
                         </a></li>
-                    <li><a href="">
+                    <li class="sidebar-link"><a href="">
                             <div>
                                 <img src="icons/tracking-pixels-icon.png" alt="">
                             </div>
                             <p>Tracking Pixels</p>
                         </a></li>
-                    <li>
+                    <li class="sidebar-link">
                         <a href="">
                             <div>
                                 <img src="icons/branded-domains-icon.png" alt="">
@@ -126,7 +124,7 @@
                             <p>Branded Domains</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="sidebar-link">
                         <a href="">
                             <div>
                                 <img src="icons/teams-icon.png" alt="">
@@ -134,7 +132,7 @@
                             <p>Teams</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="sidebar-link">
                         <a href="">
                             <div>
                                 <img src="icons/Integrat-icon.png" alt="">
@@ -143,7 +141,7 @@
                             </p>
                         </a>
                     </li>
-                    <li class="aside-tools-drpbtn">
+                    <li class="aside-tools-drpbtn sidebar-link">
                         <div class="dropdown dropbottom">
                             <div class="tools-icon-div">
                                 <img src="icons/tools-icon.png" alt="">
@@ -152,7 +150,7 @@
                                 <span>Tools</span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li class=""><a class="dropdown-item" href="#">Users tools </a></li>
+                                <li class="sidebar-link"><a class="dropdown-item sidebar-link" href="#">Users tools </a></li>
                             </ul>
                         </div>
                     </li>
@@ -401,8 +399,8 @@
                                 <div class="left-baner">
                                     <div class="wraper">
                                         <div class="shorten-link">
-                                            <textarea class="form-control border-0 past-up-ten-long-url-txtarea" name="" id=""
-                                                rows="4"
+                                            <textarea class="form-control border-0 past-up-ten-long-url-txtarea" name=""
+                                                id="" rows="4"
                                                 placeholder="Past up to 10 long urls. One URL per line."></textarea>
                                             <input class="form-control ds-paste-long-link-input" type="text"
                                                 placeholder="Paste a long link">
@@ -573,6 +571,57 @@
                 $('.past-up-ten-long-url-txtarea').show(); // This line is redundant since the element is already clicked
                 $('.ds-paste-long-link-input').hide();
             });
+
+
+
+
+
+
+
+
+     // Function to set the active class based on localStorage
+     function setActiveLink() {
+        var activeLink = localStorage.getItem('activeLink');
+        if (activeLink) {
+            // Set the stored link as active
+            $('.sidebar-link a[href="' + activeLink + '"]').closest('li').addClass('active');
+        } else {
+            // Set the topmost link as active if no link is stored
+            $('.sidebar-link').first().addClass('active');
+        }
+    }
+
+    // Set the active link on page load
+    setActiveLink();
+
+    // Add click event for sidebar links
+    $('.sidebar-link a').click(function(event) {
+        event.preventDefault(); // Prevent default behavior to avoid page refresh
+
+        var $parentLi = $(this).closest('li');
+        var href = $(this).attr('href');
+
+        // Remove the active class from all <li> elements and add it to the clicked <li>
+        $('.sidebar-link').removeClass('active');
+        $parentLi.addClass('active');
+
+        // Store the href in localStorage
+        if (href) {
+            localStorage.setItem('activeLink', href);
+            // Navigate to the link after updating the active state
+            window.location.href = href;
+        }
+    });
+
+    // Prevent clicks inside the sidebar from being considered as 'outside'
+    $('.left-sidebar').click(function(event) {
+        event.stopPropagation();
+    });
+
+
+
+
+
 
 
         });
