@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bio pages </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Gilroy Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gilroy:wght@400;700&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="main-wraper">
+        <!-- aside bar  -->
+        <aside class="left-sidebar">
+            <div class="sidebar-header">
+                <ul class="logo-ul">
+                    <li><img class="aside-logo" src="icons/urlshortly-logo-icon.png" alt=""><img class="aside-txt-logo"
+                            src="icons/urlshortly-text-logo.png" alt=""></li>
+                </ul>
+
+                <!-- collaps icon  -->
+                <img class="sidebar-collaps-icon" src="icons/sidebar-collaps-icon.png" alt="">
+            </div>
+            <div class="aside-content">
+                <ul>
+                    <li class="sidebar-link"><a href="/urlshortly-dashboard/dashboard.html">
+                            <div>
+                                <img src="icons/dashboard-icon.png" alt="">
+                            </div>
+                            <p>Dashboards</p>
+                        </a>
+                    </li>
+                    <li class="sidebar-link"> <a href="/urlshortly-dashboard/bio-pages.html">
+                            <div>
+                                <img src="icons/bio-page-icon.png" alt="">
+                            </div>
+                            <p>Bio Pages</p>
+                        </a>
+                    </li>
+                    <li class="sidebar-link"><a href="">
+                            <div>
+                                <img src="icons/qr-code-icon.png" alt="">
+                            </div>
+                            <p>QR Codes</p>
+                        </a>
+                    </li>
+                    <li class="sidebar-link"><a href="">
+                            <div>
+                                <img src="icons/statistic-icon.png" alt="">
+                            </div>
+                            <p>Statistics</p>
+                        </a>
+                    </li>
+                </ul>
+                <h6 class="asidebar-sub-heading">Channels</h6>
+                <ul>
+                    <li class="sidebar-link"><a href="">
+                            <div>
+                                <img src="icons/my-channel-icon.png" alt="">
+                            </div>
+                            <p>My Channels</p>
+                        </a>
+                    </li>
+                </ul>
+                <h6 class="asidebar-sub-heading">Link Management</h6>
+
+                <ul>
+                    <li class="sidebar-link"><a href="">
+                            <div>
+                                <img src="icons/links-icon.png" alt="">
+                            </div>
+                            <p>Links</p>
+                        </a></li>
+                    <li class="sidebar-link"><a href="">
+                            <div>
+                                <img src="icons/achieved-links-icon.png" alt="">
+                            </div>
+                            <p>Achieved Links</p>
+                        </a></li>
+                    <li class="sidebar-link"><a href="">
+                            <div>
+                                <img src="icons/expired-links.png" alt="">
+                            </div>
+                            <p>Expired Links</p>
+                        </a></li>
+                    <li class="sidebar-link"><a href="">
+                            <div>
+                                <img src="icons/campaigns-icon.png" alt="">
+                            </div>
+                            <p>Campaigns</p>
+                        </a></li>
+                    <li class="sidebar-link"><a href="">
+                            <div>
+                                <img src="icons/custom-splash-icon.png" alt="">
+                            </div>
+                            <p>Custom Splash</p>
+                        </a></li>
+                    <li class="sidebar-link"><a href="">
+                            <div>
+                                <img src="icons/cta-icon.png" alt="">
+                            </div>
+                            <p>CTA Overlay
+                            </p>
+                        </a></li>
+                    <li class="sidebar-link"><a href="">
+                            <div>
+                                <img src="icons/tracking-pixels-icon.png" alt="">
+                            </div>
+                            <p>Tracking Pixels</p>
+                        </a></li>
+                    <li class="sidebar-link">
+                        <a href="">
+                            <div>
+                                <img src="icons/branded-domains-icon.png" alt="">
+                            </div>
+                            <p>Branded Domains</p>
+                        </a>
+                    </li>
+                    <li class="sidebar-link">
+                        <a href="">
+                            <div>
+                                <img src="icons/teams-icon.png" alt="">
+                            </div>
+                            <p>Teams</p>
+                        </a>
+                    </li>
+                    <li class="sidebar-link">
+                        <a href="">
+                            <div>
+                                <img src="icons/Integrat-icon.png" alt="">
+                            </div>
+                            <p>Integrations
+                            </p>
+                        </a>
+                    </li>
+                    <li class="aside-tools-drpbtn sidebar-link">
+                        <div class="dropdown dropbottom">
+                            <div class="tools-icon-div">
+                                <img src="icons/tools-icon.png" alt="">
+                            </div>
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                                <span>Tools</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="sidebar-link"><a class="dropdown-item sidebar-link" href="#">Users tools </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </aside>
+        <!-- end aside bar  -->
+
+
+        <div class="right-main-wraper">
+            <!-- header  -->
+            <header class="dashboard-header">
+                <div class="row mx-0">
+                    <div class="col-lg-6 ">
+                        <div class="ds-header-quick-shorten">
+                            <button type="button" class="btn" data-bs-toggle="modal"
+                                data-bs-target="#quick-shortener-model">
+                                Quick Shortener
+                                <span class="ctrl-k-text">CTRL K</span>
+                            </button>
+                        </div>
+
+                        <!-- header quick shorten model  -->
+                        <div class="modal quick-short-model" id="quick-shortener-model">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Quick Shorten</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="past-long-url-content">
+                                            <input class="form-control border-0" type="search"
+                                                placeholder="Past a long link">
+                                            <div class="btn-group" role="group" aria-label="Button group">
+                                                <button class="btn" data-bs-toggle="collapse" data-bs-target="#demo">
+                                                    <img src="icons/ds-header-filter.png" alt="">
+                                                </button>
+                                                <button class="btn btn-primary">Shorten</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- collapse  -->
+                                        <div id="demo" class="collapse past-long-link-collapse">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="domain">Domain</label>
+                                                        <div class="dropdown">
+                                                            <button type="button"
+                                                                class="btn text-start w-100 dropdown-toggle border"
+                                                                data-bs-toggle="dropdown">
+                                                                https:/urlshortly.com
+                                                            </button>
+                                                            <ul class="dropdown-menu py-0 w-100 rounded-0">
+                                                                <li class="p-1"><input class="w-100 p-1" type="search">
+                                                                </li>
+                                                                <li class="bg-primary p-2"> https:/urlshortly.com</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="redirect">Redirect</label>
+                                                        <div class="dropdown">
+                                                            <button type="button"
+                                                                class="btn text-start w-100 dropdown-toggle border"
+                                                                data-bs-toggle="dropdown">
+                                                                Splash
+                                                            </button>
+                                                            <ul class="dropdown-menu py-0 w-100 rounded-0">
+                                                                <li class="p-1"><input class="w-100 p-1" type="search">
+                                                                </li>
+                                                                <li class="p-2 ds-redirection">Redirection</li>
+                                                                <li class="bg-primary p-2">Splash</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="password-rotection">Password Protection</label>
+                                                        <p class="label-description">By adding a password, you can
+                                                            restrict the access.</p>
+                                                        <div class="type-your-password-her">
+                                                            <input class="form-control" type="text"
+                                                                id="password-rotection"
+                                                                placeholder="Type your password here">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="item">
+                                                        <label for="description">Description</label>
+                                                        <p class="label-description">This can be used to identify URLs
+                                                            on your account.</p>
+                                                        <div class="type-your-description-her">
+                                                            <input class="form-control" type="text" id="description"
+                                                                placeholder="Type your description here">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ds-admin-info">
+                            <div class="item">
+                                <ul class="admin-content">
+                                    <li class="filter mr_20"><img src="icons/ds-header-filter.png" alt=""></li>
+                                    <li class="bill-icon mr_20"><img src="icons/ds-info-icon.png" alt=""> <span
+                                            class="bill-info-count">4</span></li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                                                <img src="icons/ds-admin-img.png" alt="">
+
+                                                <img src="icons/ds-admin-drp-dwn-icon.png" alt="">
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Billing</a></li>
+                                                <li><a class="dropdown-item" href="#">Get Verified</a></li>
+                                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                                <li><a class="dropdown-item" href="#">Help Center</a></li>
+                                                <li><a class="dropdown-item" href="#">Log out</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- The <div> with the .right-main-content-wraper class is used over <div>s on all pages. The content within it will be different for each page.  -->
+            <div class="right-main-content-wraper ">
+                <div class="bio-pages-main-content">
+                    <div class="top-baner">
+                        <div class="d_flex">
+                            <h5 class="title">Bio Pages <img src="icons/information-icon.png" alt=""></h5>
+
+                            <!-- Button to trigger the modal -->
+                            <button data-bs-toggle="modal" data-bs-target="#create-bio-Modal" class="btn create-bio-btn">Create
+                                Bio</button>
+
+                            <!-- create bio model popups -->
+                            <div class="modal fade" id="create-bio-Modal" tabindex="-1" aria-labelledby="modalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-right">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="modalLabel">Create Bio <img src="icons/information-icon.png" alt=""></h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+
+                                        <!-- Modal Body -->
+                                        <div class="modal-body">
+                                            <label for="full-name">Full Name (Required)</label>
+                                            <input class="form-control" required type="text">
+
+                                            <label for="alias">Alias</label>
+                                            <input class="form-control"  type="text">
+
+                                            <p>Leave this field empty to generate a random alias</p>
+                                        </div>
+
+                                        <!-- Modal Footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn cancel-btn"
+                                                data-bs-dismiss="modal">Cancel</button>
+
+                                                <button class="btn create-chanel-btn">Create Channel</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- end popups  -->
+                        </div>
+                        <div class="bio-page-reviews-baner">
+                           <div class="item total-bio-pages">
+                               <p class="p-unlimited"><span>0</span>Bio Pages / Unlimited</p>
+                               <img src="icons/paids-keywords-today-img.png" alt="">
+                           </div>
+                           <div class="item views">
+                            <div>
+                                <p class="p-views">Views</p>
+                                <p class="p-botom"> <span>0</span>  Last 10 Days</p>
+                            </div>
+                           </div>
+                           <div class="bio-page-search-div">
+                               <div class="search-baner">
+                                      <input class="form-control" type="search" placeholder="Search for Bio Pages">
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+
+                    <!-- bottom baner  -->
+                    <div class="bottom-baner">
+                        <p>No content found. You can create some</p>
+
+                        <!-- Button to trigger the modal -->
+                        <button data-bs-toggle="modal" data-bs-target="#create-bio-Modal" class="btn create-bio-btn">Create
+                            Bio</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // === for bio pages code 
+
+            //=== end for bio pages code 
+
+
+
+            // === for aside bar collapse and inner elements 
+            $('.sidebar-collaps-icon').click(function () {
+                // Toggle the 'collapsed' class on the sidebar
+                $('.left-sidebar').toggleClass('collapsed');
+
+                // collaps icon rotate 
+                $('.left-sidebar .sidebar-header .sidebar-collaps-icon').toggleClass('sidebar-collapse-rotate');
+
+                // Hide some elements in the sidebar 
+                $('.aside-content ul li a p').toggleClass('aside-content-p');
+
+                $('.sidebar-header li .aside-txt-logo').toggleClass('aside-txt-logo-dp-none');
+
+                $('.aside-content ul li a').toggleClass('aside-content-ul-li-a');
+
+                $('.aside-content ul li a div').toggleClass('aside-content-ul-li-a-div');
+
+                $('.asidebar-sub-heading').toggleClass('asidebar-sub-heading-text');
+
+                $('.left-sidebar .sidebar-header li').toggleClass('left-sidebar-sidebar-header-li');
+
+
+                // aside tools dropdwn btn 
+                $('.aside-tools-drpbtn .btn span').toggleClass('aside-txt-logo-dp-none');
+
+                $('.aside-tools-drpbtn .tools-icon-div').toggleClass('tools-icon-div-togle');
+
+
+            });
+
+
+            // === for asidebar header position 
+            $('.left-sidebar').on('scroll', function () {
+                if ($(this).scrollTop() > 3) {
+                    $('.sidebar-header').addClass('sidebar-header-for-sticky');
+                } else {
+
+                    $('.sidebar-header').removeClass('sidebar-header-for-sticky');
+                }
+            });
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>

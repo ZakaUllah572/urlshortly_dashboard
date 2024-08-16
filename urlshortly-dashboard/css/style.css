@@ -12,11 +12,11 @@
     --clr-383738 : #383738;
     --clr-39434F : #39434F;
     --clr-F7F5F1 : #F7F5F1;
-    --clr-697A8D : #697A8D;
     --clr-FFD25F : #FFD25F;
     --clr-FFFFFF : #FFFFFF;
     --clr--FF3E1D : #FF3E1D;
     --clr-DFE1E5 : #DFE1E5;
+   
    
 
   
@@ -207,13 +207,6 @@
     box-shadow: 0px 0px 20px 0px #F7F5F199;
    
 }
-/* for side bar link active  */
-.sidebar-link.active {
-    background-color: var(--clr-F7F5F1);
-    font-weight: bold;
-}
-
-/* end for side bar link active  */
 
 
 .left-sidebar.collapsed {
@@ -399,7 +392,7 @@
 
 /* == right main content wraper == */
 .right-main-content-wraper{
-    padding: 30px;
+    padding: 30px 35px 30px 30px;
 }
 
 /* == end right main content wraper == */
@@ -497,7 +490,6 @@
 
 /* start past a long link and recent activity content */
 
-/* end past a long link and recent activity content */
 .link-recent-activity-cont{
     margin-top: 30px;
 }
@@ -606,8 +598,171 @@
        font-weight: var(--fw-700);
        color: var(--clr-383738);
 }
-
+/* end past a long link and recent activity content */
 /* == end dashboard main content == */
+
+ /* == start bio pages main content */
+.bio-pages-main-content{
+    position: relative;
+}
+.bio-pages-main-content .top-baner{
+    background-color: var(--clr-FFFFFF);
+    box-shadow: var(--box-shadow-one);
+    border-radius: 5px;
+    padding: 15px 10px 20px 10px;
+}
+.bio-pages-main-content .top-baner h5.title{
+     font-size: var(--fs-17-66);
+     font-weight: var(--fw-700);
+     color: var(--clr-39434F);
+}
+.bio-pages-main-content .top-baner .d_flex{
+    display: flex;
+    justify-content: space-between;
+}
+.bio-pages-main-content .top-baner .create-bio-btn{
+    font-size: var(--fs-14);
+    font-weight: var(--fw-600);
+    color: var(--clr-383738);
+    background-color: var(--clr-FFD25F);
+    border-radius: 5px;
+   
+}
+/* bio page model popups box  */
+.bio-pages-main-content .top-baner .modal-dialog{
+    width: 100%;
+    max-width: 726px;
+}
+.bio-pages-main-content .top-baner .modal-dialog .modal-title{
+    font-size: var(--fs-17-66);
+    font-weight: var(--fw-600);
+    color: var(--clr-39434F);
+}
+.bio-pages-main-content .top-baner .modal-dialog .btn-close{
+      border-radius: 50px;
+      background-color: var(--clr-FFD25F);
+}
+.bio-pages-main-content .top-baner .modal-dialog label{
+    font-size: var(--fs-14);
+    font-weight: var(--fw-400);
+    color: var(--clr-697A8D);
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.bio-pages-main-content .top-baner .modal-dialog input{
+   padding-top: 12px;
+   padding-bottom: 12px;
+}
+.bio-pages-main-content .top-baner .modal-dialog p{
+    font-size: var(--fs-12-61);
+    font-weight: var(--fw-400);
+    color: var(--clr-697A8D);
+    padding-top: 17px;
+}
+.bio-pages-main-content .top-baner .modal-dialog .cancel-btn{
+    background-color: var(--clr-FFD25F);
+    font-size: var(--fs-14);
+    font-weight: var(--fw-600);
+    color: var(--clr-383738);
+}
+.bio-pages-main-content .modal-dialog .create-chanel-btn{
+    background-color: var(--clr-383738);
+    color: var(--clr-FFFFFF);
+    font-size: var(--fs-14);
+    font-weight: var(--fw-600);
+}
+/* end popups box  */
+
+.bio-pages-main-content .bio-page-reviews-baner{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+.bio-pages-main-content .bio-page-reviews-baner .item{
+    width: 100%;
+    max-width: 210px;
+    padding: 5px;
+    border-right: 1px solid var(--clr-DFE1E5);
+}
+.bio-pages-main-content .bio-page-reviews-baner .item .p-unlimited{
+    font-size: var(--fs-12-61);
+    font-weight: var(--fw-400);
+    color: var(--clr-383738);
+}
+.bio-pages-main-content .bio-page-reviews-baner .p-unlimited span{
+    font-size: var(--fs-20-18);
+    font-weight: var(--fw-600);
+    display: inline-block;
+    padding-right: 4px;
+    color: var(--clr-383738);
+}
+.bio-pages-main-content .bio-page-reviews-baner .views div{
+    max-width: 170px;
+    margin-left: auto;
+}
+.bio-pages-main-content .bio-page-reviews-baner .views .p-views{
+    font-size: var(--fs-15-14);
+    font-weight: var(--fw-400);
+    color: var(--clr-39434F);
+}
+.bio-pages-main-content .bio-page-reviews-baner .views .p-botom{
+    font-size: var(--fs-12-61);
+    font-weight: var(--fw-400);
+    color: var(--clr-697A8D);
+}
+.bio-pages-main-content .bio-page-reviews-baner .views .p-botom span{
+    font-size: var(--fs-20-18);
+    font-weight: var(--fw-600);
+    display: inline-block;
+    padding-right: 4px;
+    color: var(--clr-383738);
+}
+
+.bio-pages-main-content .bio-page-search-div{
+    width: 100%;
+}
+.bio-pages-main-content .bio-page-reviews-baner .search-baner{
+    width: 100%;
+    max-width: 559px;
+    box-shadow: var(--box-shadow-one);
+    margin-left: auto;
+}
+.bio-pages-main-content .bio-page-reviews-baner .search-baner input{
+    width: 100%;
+    max-width: 220px;
+    border: none;
+    border-right: 1px solid var(--clr-DFE1E5);
+    border-radius: 0px;
+    padding: 14px 0px 14px 7px;
+}
+.bio-pages-main-content .bio-page-reviews-baner .search-baner input::placeholder{
+    font-size: var(--fs-15-96);
+    font-weight: var(--fw-500);
+    color: var(--clr-A1ACB8);
+}
+/* bottom baner */
+
+.bio-pages-main-content .bottom-baner{
+    box-shadow: var(--box-shadow-one);
+    padding: 30px 5px;
+    border-radius: 5px;
+    margin-top: 40px;
+    text-align: center;
+}
+.bio-pages-main-content .bottom-baner p{
+    font-size: var(--fs-16-09);
+    font-weight: var(--fw-500);
+    color: var(--clr-39434F);
+}
+.bio-pages-main-content .bottom-baner .create-bio-btn{
+    font-size: var(--fs-14);
+    font-weight: var(--fw-600);
+    color: var(--clr-383738);
+    background-color: var(--clr-FFD25F);
+    border-radius: 5px;
+   
+}
+ /* == end bio pages main content  */
 
 
 

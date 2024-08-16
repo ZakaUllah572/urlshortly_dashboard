@@ -17,13 +17,12 @@
 
 
     <div class="main-wraper">
+        <!-- aside bar  -->
         <aside class="left-sidebar">
-
-
             <div class="sidebar-header">
                 <ul class="logo-ul">
-                    <li><img class="aside-logo" src="/icons/urlshortly-logo-icon.png" alt=""><img class="aside-txt-logo"
-                            src="/icons/urlshortly-text-logo.png" alt=""></li>
+                    <li><img class="aside-logo" src="icons/urlshortly-logo-icon.png" alt=""><img class="aside-txt-logo"
+                            src="icons/urlshortly-text-logo.png" alt=""></li>
                 </ul>
 
                 <!-- collaps icon  -->
@@ -31,14 +30,14 @@
             </div>
             <div class="aside-content">
                 <ul>
-                    <li class="sidebar-link"><a href="">
+                    <li class="sidebar-link"><a href="/urlshortly-dashboard/dashboard.html">
                             <div>
                                 <img src="icons/dashboard-icon.png" alt="">
                             </div>
                             <p>Dashboards</p>
                         </a>
                     </li>
-                    <li class="sidebar-link"> <a href="">
+                    <li class="sidebar-link"> <a href="/urlshortly-dashboard/bio-pages.html">
                             <div>
                                 <img src="icons/bio-page-icon.png" alt="">
                             </div>
@@ -158,7 +157,9 @@
 
             </div>
         </aside>
+
         <div class="right-main-wraper">
+            <!-- header  -->
             <header class="dashboard-header">
                 <div class="row mx-0">
                     <div class="col-lg-6 ">
@@ -166,7 +167,6 @@
                             <button type="button" class="btn" data-bs-toggle="modal"
                                 data-bs-target="#quick-shortener-model">
                                 Quick Shortener
-
                                 <span class="ctrl-k-text">CTRL K</span>
                             </button>
                         </div>
@@ -295,6 +295,8 @@
                     </div>
                 </div>
             </header>
+
+             <!-- The <div> with the .right-main-content-wraper class is used over <div>s on all pages. The content within it will be different for each page.  -->
             <div class="right-main-content-wraper">
                 <div class="dashboard-main-content">
                     <img class="gd-morning-img" src="icons/good-morning-img.png" alt="good morning">
@@ -563,61 +565,14 @@
             // === for dashboard right content 
             // shorten-link for single and multiple btn 
             $('.ds-single-btn').click(function () {
-                $('.ds-paste-long-link-input').show(); // This line is redundant since the element is already clicked
+                $('.ds-paste-long-link-input').show(); 
                 $('.past-up-ten-long-url-txtarea').hide();
             });
 
             $('.ds-multiple-btn').click(function () {
-                $('.past-up-ten-long-url-txtarea').show(); // This line is redundant since the element is already clicked
+                $('.past-up-ten-long-url-txtarea').show(); 
                 $('.ds-paste-long-link-input').hide();
             });
-
-
-
-
-
-
-
-
-     // Function to set the active class based on localStorage
-     function setActiveLink() {
-        var activeLink = localStorage.getItem('activeLink');
-        if (activeLink) {
-            // Set the stored link as active
-            $('.sidebar-link a[href="' + activeLink + '"]').closest('li').addClass('active');
-        } else {
-            // Set the topmost link as active if no link is stored
-            $('.sidebar-link').first().addClass('active');
-        }
-    }
-
-    // Set the active link on page load
-    setActiveLink();
-
-    // Add click event for sidebar links
-    $('.sidebar-link a').click(function(event) {
-        event.preventDefault(); // Prevent default behavior to avoid page refresh
-
-        var $parentLi = $(this).closest('li');
-        var href = $(this).attr('href');
-
-        // Remove the active class from all <li> elements and add it to the clicked <li>
-        $('.sidebar-link').removeClass('active');
-        $parentLi.addClass('active');
-
-        // Store the href in localStorage
-        if (href) {
-            localStorage.setItem('activeLink', href);
-            // Navigate to the link after updating the active state
-            window.location.href = href;
-        }
-    });
-
-    // Prevent clicks inside the sidebar from being considered as 'outside'
-    $('.left-sidebar').click(function(event) {
-        event.stopPropagation();
-    });
-
 
 
 
